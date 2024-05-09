@@ -4,7 +4,6 @@ DATABASE = "cars.db"
 
 def print_all_cars():
     speed = input("What speed: ")
-
     with sqlite3.connect(DATABASE) as db:
         cursor = db.cursor()
         sql = "SELECT car_name, top_speed FROM car WHERE top_speed > ?;"
