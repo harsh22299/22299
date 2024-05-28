@@ -16,7 +16,7 @@ def print_all_plane():
     results = cursor.fetchall()
     #loop through all results
     for plane in results:
-        print(f'{plane[1]}{plane[2]}{plane[3]}{plane[4]}{plane[5]}{plane[6]}')
+        print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<30}{plane[4]:<10}{plane[5]:<20}{plane[6]:<20}')
     #loop finishes here
     db.close()
 
