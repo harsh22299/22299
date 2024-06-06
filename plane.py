@@ -66,6 +66,66 @@ def print_all_plane_from_fighter_class():
     #loop finishes here
     db.close()
 
+
+def print_all_plane_from_heavy_bomber_class():
+    """print all aircraft from Heavy Bomber class"""
+    db = sqlite3.connect(DATABASE)
+    cursor = db.cursor()
+    sql = "SELECT * FROM plane WHERE plane_class = 'Heavy Bomber';"
+    cursor.execute(sql)
+    results = cursor.fetchall()
+    #loop through all results
+    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    for plane in results:
+        print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
+    #loop finishes here
+    db.close()
+
+
+def print_all_plane_from_dive_bomber_class():
+    """print all aircraft from Dive Bomber class"""
+    db = sqlite3.connect(DATABASE)
+    cursor = db.cursor()
+    sql = "SELECT * FROM plane WHERE plane_class = 'Dive Bomber';"
+    cursor.execute(sql)
+    results = cursor.fetchall()
+    #loop through all results
+    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    for plane in results:
+        print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
+    #loop finishes here
+    db.close()
+
+
+def print_all_plane_from_medium_bomber_class():
+    """print all aircraft from Heavy Bomber class"""
+    db = sqlite3.connect(DATABASE)
+    cursor = db.cursor()
+    sql = "SELECT * FROM plane WHERE plane_class = 'Medium Bomber';"
+    cursor.execute(sql)
+    results = cursor.fetchall()
+    #loop through all results
+    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    for plane in results:
+        print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
+    #loop finishes here
+    db.close()
+
+def print_all_plane_from_ground_attack_class():
+    """print all aircraft from Ground Attack class"""
+    db = sqlite3.connect(DATABASE)
+    cursor = db.cursor()
+    sql = "SELECT * FROM plane WHERE plane_class = 'Ground Attack Aircraft';"
+    cursor.execute(sql)
+    results = cursor.fetchall()
+    #loop through all results
+    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    for plane in results:
+        print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
+    #loop finishes here
+    db.close()
+
+
 #main code 
 while True:
     user_input = input(
@@ -75,7 +135,11 @@ What would you like to do?
 2. Print all aircraft sorted by speed.
 3. Print all aircraft sorted by year introduced
 4. Print all aircraft from Fighter class
-5. Exit
+5. Print all aircraft from Heavy Bomber class
+6. Print all aircraft from Dive Bomber class
+7. Print all aircraft from Medium Bomber class
+8. Print all aircraft from Ground Attack aircraft class
+9. Exit 
 """)
     if user_input == "1":
         print_all_plane()
@@ -86,6 +150,14 @@ What would you like to do?
     if user_input == "4":
         print_all_plane_from_fighter_class()
     if user_input == "5":
-        break 
+        print_all_plane_from_heavy_bomber_class() 
+    if user_input == "6":
+        print_all_plane_from_dive_bomber_class()
+    if user_input == "7":
+        print_all_plane_from_medium_bomber_class()
+    if user_input == "8":
+        print_all_plane_from_ground_attack_class()
+    if user_input == '9':
+        break
     else:
-        print("That is not an option\n")
+        print("That is not an option")
