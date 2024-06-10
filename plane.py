@@ -126,6 +126,112 @@ def print_all_plane_from_ground_attack_class():
     db.close()
 
 
+def print_all_american():
+    """print all aircraft from America"""
+    db = sqlite3.connect(DATABASE)
+    cursor = db.cursor()
+    sql = "SELECT * FROM plane WHERE country_origin = 'United States';"
+    cursor.execute(sql)
+    results = cursor.fetchall()
+    #loop through all results
+    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    for plane in results:
+        print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
+    #loop finishes here
+    db.close()
+
+
+def print_all_german():
+    """print all aircraft from Germany"""
+    db = sqlite3.connect(DATABASE)
+    cursor = db.cursor()
+    sql = "SELECT * FROM plane WHERE country_origin == 'Germany';"
+    cursor.execute(sql)
+    results = cursor.fetchall()
+    #loop through all results
+    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    for plane in results:
+        print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
+    #loop finishes here
+    db.close()
+
+
+def print_all_british():
+    """print all aircraft from United Kingdom"""
+    db = sqlite3.connect(DATABASE)
+    cursor = db.cursor()
+    sql = "SELECT * FROM plane WHERE country_origin == 'United Kingdom';"
+    cursor.execute(sql)
+    results = cursor.fetchall()
+    #loop through all results
+    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    for plane in results:
+        print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
+    #loop finishes here
+    db.close()
+
+
+def print_all_japanese():
+    """print all aircraft from Japan"""
+    db = sqlite3.connect(DATABASE)
+    cursor = db.cursor()
+    sql = "SELECT * FROM plane WHERE country_origin == 'Japan';"
+    cursor.execute(sql)
+    results = cursor.fetchall()
+    #loop through all results
+    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    for plane in results:
+        print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
+    #loop finishes here
+    db.close()
+
+
+def print_all_soviet():
+    """print all aircraft from the USSR"""
+    db = sqlite3.connect(DATABASE)
+    cursor = db.cursor()
+    sql = "SELECT * FROM plane WHERE country_origin == 'USSR';"
+    cursor.execute(sql)
+    results = cursor.fetchall()
+    #loop through all results
+    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    for plane in results:
+        print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
+    #loop finishes here
+    db.close()
+
+
+def print_all_italian():
+    """print all aircraft from Italy"""
+    db = sqlite3.connect(DATABASE)
+    cursor = db.cursor()
+    sql = "SELECT * FROM plane WHERE country_origin == 'Italy';"
+    cursor.execute(sql)
+    results = cursor.fetchall()
+    #loop through all results
+    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    for plane in results:
+        print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
+    #loop finishes here
+    db.close()
+
+
+def print_all_french():
+    """print all aircraft from France"""
+    db = sqlite3.connect(DATABASE)
+    cursor = db.cursor()
+    sql = "SELECT * FROM plane WHERE country_origin == 'France';"
+    cursor.execute(sql)
+    results = cursor.fetchall()
+    #loop through all results
+    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    for plane in results:
+        print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
+    #loop finishes here
+    db.close()
+
+
+
 #main code 
 while True:
     user_input = input(
@@ -139,7 +245,14 @@ What would you like to do?
 6. Print all aircraft from Dive Bomber class
 7. Print all aircraft from Medium Bomber class
 8. Print all aircraft from Ground Attack aircraft class
-9. Exit 
+9. Print all American aircraft 
+10. Print all German aircraft 
+11. Print all Japanese aircraft 
+12. Print all British aircraft
+13. Print all Soviet aircraft
+14. Print all Italian aircraft 
+15. Print all French aircraft
+16. Exit
 """)
     if user_input == "1":
         print_all_plane()
@@ -158,6 +271,21 @@ What would you like to do?
     if user_input == "8":
         print_all_plane_from_ground_attack_class()
     if user_input == '9':
+        print_all_american()
+    if user_input == '10':
+        print_all_german()
+    if user_input == "11":
+        print_all_japanese()
+    if user_input == '12':
+        print_all_british()
+    if user_input == "13":
+        print_all_soviet()
+    if user_input == "14":
+        print_all_italian()
+    if user_input == '15':
+        print_all_french()
+    if user_input == "16":
         break
+
     else:
         print("That is not an option")
