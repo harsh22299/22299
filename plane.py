@@ -240,52 +240,63 @@ What would you like to do?
 1. Print all aircraft.
 2. Print all aircraft sorted by speed.
 3. Print all aircraft sorted by year introduced
-4. Print all aircraft from Fighter class
-5. Print all aircraft from Heavy Bomber class
-6. Print all aircraft from Dive Bomber class
-7. Print all aircraft from Medium Bomber class
-8. Print all aircraft from Ground Attack aircraft class
-9. Print all American aircraft 
-10. Print all German aircraft 
-11. Print all Japanese aircraft 
-12. Print all British aircraft
-13. Print all Soviet aircraft
-14. Print all Italian aircraft 
-15. Print all French aircraft
-16. Exit
+4. Print all aircraft from a certain class
+5. Print all aircraft from a Certain Country
 """)
     if user_input == "1":
         print_all_plane()
-    if user_input == "2":
+    elif user_input == "2":
         print_all_plane_sorted_speed()
-    if user_input == "3":
+    elif user_input == "3":
         print_all_plane_sorted_year_intro()
-    if user_input == "4":
-        print_all_plane_from_fighter_class()
-    if user_input == "5":
-        print_all_plane_from_heavy_bomber_class() 
-    if user_input == "6":
-        print_all_plane_from_dive_bomber_class()
-    if user_input == "7":
-        print_all_plane_from_medium_bomber_class()
-    if user_input == "8":
-        print_all_plane_from_ground_attack_class()
-    if user_input == '9':
-        print_all_american()
-    if user_input == '10':
-        print_all_german()
-    if user_input == "11":
-        print_all_japanese()
-    if user_input == '12':
-        print_all_british()
-    if user_input == "13":
-        print_all_soviet()
-    if user_input == "14":
-        print_all_italian()
-    if user_input == '15':
-        print_all_french()
-    if user_input == "16":
-        break
+    elif user_input == "4":
+        user_input = input(
+        """What class?
+1. Fighter
+2. Medium Bomber
+3. Heavy Bomber
+4. Dive Bomber
+5. Ground Attack
+""")
+        if user_input == '1':
+            print_all_plane_from_fighter_class()
+        elif user_input == '2':
+            print_all_plane_from_medium_bomber_class()
+        elif user_input == '3':
+            print_all_plane_from_heavy_bomber_class()
+        elif user_input == '4':
+            print_all_plane_from_dive_bomber_class()
+        elif user_input == '5':
+            print_all_plane_from_ground_attack_class()
+        else:
+             print("That is not an option/n")
+    elif user_input == '5':
+        user_input = input(
+        """What Country?
+1. United States
+2. Germany
+3. Japan
+4. United Kingdom
+5. USSR
+6. France
+7. Italy
+""")
+        if user_input == '1': 
+            print_all_american()
+        elif user_input == '2':
+            print_all_german()
+        elif user_input == '3':
+            print_all_japanese()
+        elif user_input == '4':
+            print_all_british()
+        elif user_input == '5':
+            print_all_soviet()
+        elif user_input == '6':
+            print_all_french()
+        elif user_input == '7':
+            print_all_italian()
+        else:
+            print("That is not an option/n")
 
-    else:
-        print("That is not an option")
+   
+    
