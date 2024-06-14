@@ -15,7 +15,7 @@ def print_all_plane():
     cursor.execute(sql)
     results = cursor.fetchall()
     #loop through all results
-    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    print(f"Aircraft              Top speed    Manufacturer             Year intro   Country origin     Plane class ")
     for plane in results:
         print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
     #loop finishes here
@@ -30,7 +30,7 @@ def print_all_plane_sorted_speed():
     cursor.execute(sql)
     results = cursor.fetchall()
     #loop through all results
-    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    print(f"Aircraft              Top speed    Manufacturer             Year intro   Country origin     Plane class ")
     for plane in results:
         print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
     #loop finishes here
@@ -45,7 +45,7 @@ def print_all_plane_sorted_year_intro():
     cursor.execute(sql)
     results = cursor.fetchall()
     #loop through all results
-    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    print(f"Aircraft              Top speed    Manufacturer             Year intro   Country origin     Plane class ")
     for plane in results:
         print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
     #loop finishes here
@@ -60,7 +60,7 @@ def print_all_plane_from_fighter_class():
     cursor.execute(sql)
     results = cursor.fetchall()
     #loop through all results
-    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    print(f"Aircraft              Top speed    Manufacturer             Year intro   Country origin     Plane class ")
     for plane in results:
         print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
     #loop finishes here
@@ -75,7 +75,7 @@ def print_all_plane_from_heavy_bomber_class():
     cursor.execute(sql)
     results = cursor.fetchall()
     #loop through all results
-    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    print(f"Aircraft              Top speed    Manufacturer             Year intro   Country origin     Plane class ")
     for plane in results:
         print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
     #loop finishes here
@@ -90,7 +90,7 @@ def print_all_plane_from_dive_bomber_class():
     cursor.execute(sql)
     results = cursor.fetchall()
     #loop through all results
-    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    print(f"Aircraft              Top speed    Manufacturer             Year intro   Country origin     Plane class ")
     for plane in results:
         print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
     #loop finishes here
@@ -105,7 +105,7 @@ def print_all_plane_from_medium_bomber_class():
     cursor.execute(sql)
     results = cursor.fetchall()
     #loop through all results
-    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    print(f"Aircraft              Top speed    Manufacturer             Year intro   Country origin     Plane class ")
     for plane in results:
         print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
     #loop finishes here
@@ -119,7 +119,7 @@ def print_all_plane_from_ground_attack_class():
     cursor.execute(sql)
     results = cursor.fetchall()
     #loop through all results
-    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    print(f"Aircraft              Top speed    Manufacturer             Year intro   Country origin     Plane class ")
     for plane in results:
         print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
     #loop finishes here
@@ -134,7 +134,7 @@ def print_all_american():
     cursor.execute(sql)
     results = cursor.fetchall()
     #loop through all results
-    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    print(f"Aircraft              Top speed    Manufacturer             Year intro   Country origin     Plane class ")
     for plane in results:
         print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
     #loop finishes here
@@ -149,7 +149,7 @@ def print_all_german():
     cursor.execute(sql)
     results = cursor.fetchall()
     #loop through all results
-    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    print(f"Aircraft              Top speed    Manufacturer             Year intro   Country origin     Plane class ")
     for plane in results:
         print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
     #loop finishes here
@@ -164,7 +164,7 @@ def print_all_british():
     cursor.execute(sql)
     results = cursor.fetchall()
     #loop through all results
-    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    print(f"Aircraft              Top speed    Manufacturer             Year intro   Country origin     Plane class ")
     for plane in results:
         print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
     #loop finishes here
@@ -179,7 +179,7 @@ def print_all_japanese():
     cursor.execute(sql)
     results = cursor.fetchall()
     #loop through all results
-    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    print(f"Aircraft              Top speed    Manufacturer             Year intro   Country origin     Plane class ")
     for plane in results:
         print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
     #loop finishes here
@@ -194,7 +194,7 @@ def print_all_soviet():
     cursor.execute(sql)
     results = cursor.fetchall()
     #loop through all results
-    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    print(f"Aircraft              Top speed    Manufacturer             Year intro   Country origin     Plane class ")
     for plane in results:
         print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
     #loop finishes here
@@ -209,7 +209,7 @@ def print_all_italian():
     cursor.execute(sql)
     results = cursor.fetchall()
     #loop through all results
-    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    print(f"Aircraft              Top speed    Manufacturer             Year intro   Country origin     Plane class ")
     for plane in results:
         print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
     #loop finishes here
@@ -224,7 +224,7 @@ def print_all_french():
     cursor.execute(sql)
     results = cursor.fetchall()
     #loop through all results
-    print(f"aircraft              top_speed    manufacturer             year_intro   country_origin     plane_class ")
+    print(f"Aircraft              Top speed    Manufacturer             Year intro   Country origin     Plane class ")
     for plane in results:
         print(f'{plane[1]:<25}{plane[2]:<10}{plane[3]:<28}{plane[4]:<12}{plane[5]:<19}{plane[6]:<20}')
     #loop finishes here
@@ -239,9 +239,10 @@ while True:
 What would you like to do?
 1. Print all aircraft.
 2. Print all aircraft sorted by speed.
-3. Print all aircraft sorted by year introduced
-4. Print all aircraft from a certain class
-5. Print all aircraft from a Certain Country
+3. Print all aircraft sorted by year introduced.
+4. Print all aircraft from a certain class.
+5. Print all aircraft from a certain country.
+6. Exit
 """)
     if user_input == "1":
         print_all_plane()
@@ -296,7 +297,6 @@ What would you like to do?
         elif user_input == '7':
             print_all_italian()
         else:
-            print("That is not an option/n")
-
-   
-    
+            print("That is not an option")
+    if user_input == '6':
+        break        
